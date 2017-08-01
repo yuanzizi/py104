@@ -50,7 +50,7 @@ print('I write a "双引号" 特殊字符!@#$%^&* in single-quote string')
 print("I write a \"\" in double-qutoe string。") # 可以通过 \ 来转义字符
 
 
-# ----- ex7，ex8 高级格式化打印2 ------------------------------
+# ----- ex7，ex8 ，ex9高级格式化打印2 ------------------------------
 print("It's fleece was white as {}.".format('snow'))
 snow = 'SNOW'
 print("It's fleece was white as {}.".format(snow))# {}代表一个参数，在后面进行传参
@@ -68,3 +68,27 @@ print(formatter.format(
     "No 3",
     "No 4"
 ))
+
+# 打印特殊格式
+print(x,"\n",y )
+### 为何会"\n"下一行多一个空格？？？
+### 如果用 + 而不是 ， 就不会多个空格，
+### print()函数的 ，会自动多个空格么？
+
+### My name is Eric Chi.
+### I have 100 cars.
+print(x+"\n"+y)
+
+# 3个双引号(单引号) 可以把一大段字符串按照本来的格式输出
+print("""
+    这是一大堆字符串，
+      我在这里换行了~！
+    这里结束。
+    """)
+
+print("\t 这里加了\\t转义符~！")
+
+for i in ["/","-","|","\\","|"]:
+    print("{}".format(i))
+    print("{}\n".format(i))
+    print("\t{}".format(i))
